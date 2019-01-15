@@ -13,7 +13,7 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Build Was Image') {
+        stage('Build WAS Image') {
             //agent none 
             steps {
                 script {
