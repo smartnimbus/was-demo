@@ -25,7 +25,7 @@ pipeline {
             agent any  
             steps {
                 script {
-                    echo "hello"
+                    echo "docker version"
                     sh "docker run --name was8-${env.BUILD_ID} -p 9043:9043 -p 9443:9443 -d was8:${env.BUILD_ID}"
                     sh "docker exec was8-${env.BUILD_ID} cat /tmp/PASSWORD"
                 }
