@@ -12,7 +12,7 @@ pipeline {
                 sh 'mvn --version'
                 sh 'mvn -B -DskipTests clean package'
             }
-        }
+        //}
         //stage('Build Was Image') {
             steps {
                 script {
@@ -27,7 +27,7 @@ pipeline {
                     sh "docker exec was8-${env.BUILD_ID} cat /tmp/PASSWORD"
                 }
             }
-        //}
+        }
     }
 }
 
